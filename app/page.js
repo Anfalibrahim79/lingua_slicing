@@ -75,13 +75,13 @@ export default function Home() {
         </div>
       </section>
       {/*Why choose */}
-      <section className="container flex items-center justify-center mx-auto lg:mx-0">
+      <section className="container flex items-center justify-center mx-auto lg:px-[100px]">
         <div className="min-h-full lg:h-[472px] mt-[200px] flex flex-col items-center">
           <div className="flex flex-col items-center">
             <p className="text-lg font-bold leading-[190%] uppercase text-outline">WHY CHOOSE US</p>
             <h2 className="text-5xl leading-[130%] text-text-primary font-light">Our values</h2>
           </div>
-          <div className="flex flex-col items-center lg:flex-row mt-[89px] px-[45px] gap-32">
+          <div className="flex flex-col items-center lg:flex-row mt-[89px] gap-32">
             <div className="flex flex-col items-center">
               <Image src={'/Glass1.png'} width={81} height={81} alt="glass-icon" />
               <p className="text-2xl font-medium text-text-primary mt-[47px] mb-4">Speaking clubs</p>
