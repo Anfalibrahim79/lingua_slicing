@@ -15,7 +15,7 @@ export default function Home() {
         <div className="bg-secondary md:min-h-[817px] rounded-[40px]">
           <div className="container mx-auto xl:px-20 pt-36 flex flex-col-reverse md:flex md:flex-row md:items-center">
             {/*Hero Text*/}
-            <div className="flex-1 p-10 md:p-0">
+            <div className="flex-1 p-10 ">
               <h1 className="font-light text-4xl leading-[126%] md:text-[56px] text-text-primary ">
                 A <span className="text-primary-200 font-medium ">unique</span> approach to learning foreign languages online
               </h1>
