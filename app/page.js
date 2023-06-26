@@ -12,11 +12,11 @@ export default function Home() {
     <>
       {/*Hero Section */}
       <section className="px-8 pt-8">
-        <div className="bg-secondary min-h-[817px] rounded-[40px]">
-          <div className="container mx-auto pt-36 flex items-center">
+        <div className="bg-secondary md:min-h-[817px] rounded-[40px]">
+          <div className="container mx-auto xl:px-20 pt-36 flex flex-col-reverse md:flex md:flex-row md:items-center">
             {/*Hero Text*/}
-            <div className="flex-1">
-              <h1 className="font-light w-[558px] leading-[126%] text-[56px] text-text-primary ">
+            <div className="flex-1 p-10 md:p-0">
+              <h1 className="font-light text-4xl leading-[126%] md:text-[56px] text-text-primary ">
                 A <span className="text-primary-200 font-medium ">unique</span> approach to learning foreign languages online
               </h1>
               <p className="mt-[18px] font-light text-text-body leading-[34px] text-lg w-7/12">
@@ -25,7 +25,7 @@ export default function Home() {
               <Button className="mt-8">Get Started</Button>
             </div>
             {/*illustration */}
-            <div className="flex-1">
+            <div className="hidden md:flex">
               <div className="relative w-fit">
                 {/*BG 1 */}
                 <div className="w-[534px] bg-[#FFD6B0]/30 aspect-1 rounded-[60px] absolute -rotate-[4deg]">
@@ -75,13 +75,13 @@ export default function Home() {
         </div>
       </section>
       {/*Why choose */}
-      <section className="flex items-center justify-center">
-        <div className="w-[1240px] min-h-[472px] mt-[200px] flex flex-col items-center">
+      <section className="container flex items-center justify-center">
+        <div className="min-h-full md:h-[472px] mx-10 md:mx-[100px] mt-[200px] flex flex-col items-center">
           <div className="flex flex-col items-center">
             <p className="text-lg font-bold leading-[190%] uppercase text-outline">WHY CHOOSE US</p>
             <h2 className="text-5xl leading-[130%] text-text-primary font-light">Our values</h2>
           </div>
-          <div className="flex mt-[89px] px-[45px] gap-32">
+          <div className="flex flex-col md:flex-row mt-[89px] px-[45px] gap-32">
             <div className="flex flex-col items-center">
               <Image src={'/Glass1.png'} width={81} height={81} alt="glass-icon" />
               <p className="text-2xl font-medium text-text-primary mt-[47px] mb-4">Speaking clubs</p>
@@ -101,16 +101,16 @@ export default function Home() {
         </div>
       </section>
       {/*Teacher Section */}
-      <section className="pt-[240px] flex flex-col px-[100px]">
-        <div className="w-[1240px] min-h-[702px]">
-          <div className="flex justify-between">
+      <section className="container pt-[240px] flex flex-col">
+        <div className="min-h-full md:min-h-[702px] mx-[100px]">
+          <div className="flex md:justify-between items-center">
             <div>
               <p className="text-lg font-bold leading-[190%] text-outline uppercase">key persons</p>
               <h2 className="text-5xl font-light leading-[130%] text-text-primary">Meet our teachers</h2>
             </div>
 
             {/* icon arrow */}
-            <div className="space-x-3 flex items-center">
+            <div className="space-x-3 md:flex items-center hidden">
               <IconButton type="secondary" size="large" className=" flex justify-center items-center">
                 <MdKeyboardArrowLeft className="text-3xl" />
               </IconButton>
@@ -121,7 +121,7 @@ export default function Home() {
 
 
           </div>
-          <div className="flex mt-[58px] justify-between">
+          <div className="flex flex-col gap-5 md:flex-row mt-[58px] md:justify-between">
             <div>
               <Image src={'/man.png'} width={366} height={417} alt="teacher-photo" className="rounded-3xl" />
               <h5 className="font-medium text-2xl leading-9 mt-10 text-text-primary">Christian Howard</h5>
@@ -150,13 +150,13 @@ export default function Home() {
         </div>
       </section >
       {/*Students Section */}
-      <section section className="pt-[240px] px-[100px]" >
-        <div className="w-full h-[792px]">
+      <section section className="container pt-[240px]" >
+        <div className="h-[792px] mx-[100px]">
           <div>
             <p className="text-lg font-bold leading-[190%] uppercase text-outline">TOP STUDIYING</p>
             <h2 className="text-5xl font-light leading-[130%] text-text-primary">Our students say</h2>
             <div className="pt-[59px] flex gap-[128px]">
-              <div className="bg-[#fceae3] w-fit rounded-[60px]">
+              <div className="bg-[#fceae3] w-fit rounded-[60px] overflow-hidden">
                 <Image src={'/man3.png'} height={502} width={502} alt="students" />
               </div>
               <div className="flex-1">
@@ -176,8 +176,8 @@ export default function Home() {
         </div>
       </section >
       {/*Common Section */}
-      <section section className="pt-[200px] px-[100px]" >
-        <div className="min-w-full h-[693px]">
+      <section section className="container pt-[200px]" >
+        <div className="h-[693px] mx-[100px]">
           <p className="text-lg font-bold leading-[190%] text-outline uppercase">more info</p>
           <h2 className="text-5xl font-light leading-[130%]">Common questions</h2>
           <div className="mt-[43px] grid grid-cols-2">
@@ -230,7 +230,7 @@ export default function Home() {
             <p className="text-lg font-light leading-[190%] text-text-body text-center">Start fulfilling your language dreams with our school</p>
             <div className="mt-14 flex justify-center items-center gap-4">
               <input type="email" required placeholder="Enter your email!" className="py-[15px] pl-[33.5px] pr-[46px] border border-outline rounded-full" />
-              <Button>Send</Button>
+              <Button type="primary">Send</Button>
             </div>
           </div>
         </div>
