@@ -75,13 +75,13 @@ export default function Home() {
         </div>
       </section>
       {/*Why choose */}
-      <section className="container flex items-center justify-center">
-        <div className="min-h-full md:h-[472px] mx-10 md:mx-[100px] mt-[200px] flex flex-col items-center">
+      <section className="container flex items-center justify-center mx-auto lg:mx-0">
+        <div className="min-h-full lg:h-[472px] mt-[200px] flex flex-col items-center">
           <div className="flex flex-col items-center">
             <p className="text-lg font-bold leading-[190%] uppercase text-outline">WHY CHOOSE US</p>
             <h2 className="text-5xl leading-[130%] text-text-primary font-light">Our values</h2>
           </div>
-          <div className="flex flex-col md:flex-row mt-[89px] px-[45px] gap-32">
+          <div className="flex flex-col items-center lg:flex-row mt-[89px] px-[45px] gap-32">
             <div className="flex flex-col items-center">
               <Image src={'/Glass1.png'} width={81} height={81} alt="glass-icon" />
               <p className="text-2xl font-medium text-text-primary mt-[47px] mb-4">Speaking clubs</p>
@@ -101,8 +101,8 @@ export default function Home() {
         </div>
       </section>
       {/*Teacher Section */}
-      <section className="container pt-[240px] flex flex-col">
-        <div className="min-h-full md:min-h-[702px] mx-[100px]">
+      <section className="container pt-[240px] flex flex-col mx-auto px-10 lg:px-[100px]">
+        <div className="min-h-full md:min-h-[702px]">
           <div className="flex md:justify-between items-center">
             <div>
               <p className="text-lg font-bold leading-[190%] text-outline uppercase">key persons</p>
@@ -121,7 +121,7 @@ export default function Home() {
 
 
           </div>
-          <div className="flex flex-col gap-5 md:flex-row mt-[58px] md:justify-between">
+          <div className="flex flex-col items-center gap-5 lg:flex-row mt-[58px] md:justify-between">
             <div>
               <Image src={'/man.png'} width={366} height={417} alt="teacher-photo" className="rounded-3xl" />
               <h5 className="font-medium text-2xl leading-9 mt-10 text-text-primary">Christian Howard</h5>
@@ -150,17 +150,17 @@ export default function Home() {
         </div>
       </section >
       {/*Students Section */}
-      <section section className="container pt-[240px]" >
-        <div className="h-[792px] mx-[100px]">
+      <section section className="container pt-[240px] mx-auto px-10 lg:px-[100px]" >
+        <div className="min-h-full lg:h-[792px] ">
           <div>
             <p className="text-lg font-bold leading-[190%] uppercase text-outline">TOP STUDIYING</p>
             <h2 className="text-5xl font-light leading-[130%] text-text-primary">Our students say</h2>
-            <div className="pt-[59px] flex gap-[128px]">
-              <div className="bg-[#fceae3] w-fit rounded-[60px] overflow-hidden">
+            <div className="pt-[59px] flex flex-col lg:flex-row lg:gap-[128px]">
+              <div className="bg-[#fceae3] w-[302px] md:w-[400px] md:h-[400px] aspect-1 rounded-[60px] overflow-hidden">
                 <Image src={'/man3.png'} height={502} width={502} alt="students" />
               </div>
               <div className="flex-1">
-                <div className="mt-[107px]">
+                <div className="mt-10">
                   <h3 className="font-bold text-3xl leading-9">Martin Watson</h3>
                   <div className="flex mt-[19px] gap-1">
                     <Image src={'/spain.png'} width={34} height={34} alt="nationality" />
@@ -176,54 +176,54 @@ export default function Home() {
         </div>
       </section >
       {/*Common Section */}
-      <section section className="container pt-[200px]" >
-        <div className="h-[693px] mx-[100px]">
+      <section section className="container pt-[200px] mx-auto px-10 lg:px-[100px]" >
+        <div className="min-h-full lg:h-[693px]">
           <p className="text-lg font-bold leading-[190%] text-outline uppercase">more info</p>
           <h2 className="text-5xl font-light leading-[130%]">Common questions</h2>
-          <div className="mt-[43px] grid grid-cols-2">
-            <div className="py-9 px-14 w-[610px] border border-outline/30 rounded-[40px] ">
-              <div className="flex justify-around">
+          <div className="mt-[43px] grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="py-2 px-10  border border-outline/30 rounded-[40px] ">
+              <div className="flex justify-around gap-1">
                 <p className="text-xl font-medium leading-9 text-text-primary">How can I know my level of knowledge?</p>
-                <IconButton type="primary" size="small">+</IconButton>
+                <IconButton nButton type="primary" size="small">+</IconButton>
               </div>
             </div>
-            <div className="py-9 px-14 w-[610px] border border-outline/30 rounded-[40px]">
-              <div className="flex justify-around">
+            <div className="py-2 px-10  border border-outline/30 rounded-[40px] ">
+              <div className="flex justify-around gap-1">
                 <p className="text-xl font-medium leading-9 text-text-primary">How can I know my level of knowledge?</p>
-                <IconButton type="primary" size="small">+</IconButton>
+                <IconButton nButton type="primary" size="small">+</IconButton>
               </div>
             </div>
-            <div className="py-9 px-14 w-[610px] border border-outline/30 rounded-[40px]">
-              <div className="flex justify-around">
+            <div className="py-2 px-10  border border-outline/30 rounded-[40px] ">
+              <div className="flex justify-around gap-1">
                 <p className="text-xl font-medium leading-9 text-text-primary">How can I know my level of knowledge?</p>
-                <IconButton type="primary" size="small">+</IconButton>
+                <IconButton nButton type="primary" size="small">+</IconButton>
               </div>
             </div>
-            <div className="py-9 px-14 w-[610px] border border-outline/30 rounded-[40px]">
-              <div className="flex justify-around">
+            <div className="py-2 px-10  border border-outline/30 rounded-[40px] ">
+              <div className="flex justify-around gap-1">
                 <p className="text-xl font-medium leading-9 text-text-primary">How can I know my level of knowledge?</p>
-                <IconButton type="primary" size="small">+</IconButton>
+                <IconButton nButton type="primary" size="small">+</IconButton>
               </div>
             </div>
-            <div className="py-9 px-14 w-[610px] border border-outline/30 rounded-[40px]">
-              <div className="flex justify-around">
+            <div className="py-2 px-10  border border-outline/30 rounded-[40px] ">
+              <div className="flex justify-around gap-1">
                 <p className="text-xl font-medium leading-9 text-text-primary">How can I know my level of knowledge?</p>
-                <IconButton type="primary" size="small">+</IconButton>
+                <IconButton nButton type="primary" size="small">+</IconButton>
               </div>
             </div>
-            {/* <div className="py-9 px-14 w-[610px] border border-outline/30 rounded-[40px] bg-primary-200 text-white">
-              <div className="flex justify-around">
-                <p className="text-xl font-medium leading-9 ">How the first lesson with teacher will be?</p>
-                <IconButton type="primary" size="small">+</IconButton>
+            <div className="py-2 px-10  border border-outline/30 rounded-[40px] ">
+              <div className="flex justify-around gap-1">
+                <p className="text-xl font-medium leading-9 text-text-primary">How can I know my level of knowledge?</p>
+                <IconButton nButton type="primary" size="small">+</IconButton>
               </div>
-              <p className="text-lg font-light leading-[190%] opacity-[0.7]">By the end of the trial lesson, you will be able to determine for yourself whether this kind of online lesson is right for you or not. In our experience, most students appreciate the benefits of online education and decide to study online.</p>
-            </div> */}
+            </div>
+
 
           </div>
         </div>
       </section >
       {/*Trial Section */}
-      <section section className="pt-[39px] px-[100px]" >
+      <section section className="pt-[39px] px-[100px] mx-auto  lg:px-[100px]" >
         <div className="min-w-full h-[595px] flex justify-center items-center">
           <div>
             <h2 className="text-5xl font-light leading-[130%] text-text-primary">Get a free trial lesson today</h2>
@@ -236,11 +236,12 @@ export default function Home() {
         </div>
       </section >
       {/*Footer */}
-      <footer className="px-[100px] pb-[89px]">
+      <footer className=" pb-[89px] mx-auto lg:px-[100px]">
         <div className="bg-dark rounded-[40px]">
-          <div className="px-[69px] pt-[52px] pb-[108px] flex justify-between">
+          <div className="p-5 md:px-[69px] md:pt-[52px] md:pb-[108px] flex justify-between">
+
             {/*Name Company */}
-            <div className="pb-[10.9px] pr-[37px]">
+            <div>
               <LogoFooter className='mb-8' />
               <p className="text-xs font-light leading-6 text-text-body">20 Osgood Rd, Milford, NH 03055, USA
                 +1283871239190213021</p>
@@ -274,7 +275,7 @@ export default function Home() {
             </div>
             {/*Name Company */}
             <div>
-              <ul className="flex gap-3">
+              <ul className="md:flex gap-3">
                 <li >
                   <IconButton type="secondary" size="small" className="flex justify-center items-center"><BiLogoFacebook className="text-2xl" /></IconButton>
                 </li>
