@@ -35,10 +35,25 @@ export default function Header() {
                 <Button type='secondary' size='small' >Get Started</Button>
                 {/*Hamburger Button */}
                 <div className='flex md:hidden'>
-                    <button className='text-text-body'>
+                    <button className='text-text-body' onClick={() => setIsopen(!isOpen)}>
                         {isOpen ? <GrClose /> : <GiHamburgerMenu />}
                     </button>
                 </div>
+
+            </div>
+            <div className={`${isOpen ? 'block' : 'hidden'}`}>
+                <ul className='  flex flex-col justify-center items-end mx-auto' >
+                    {
+                        menu.map((el, key) => {
+                            return (
+                                <li key={key} className='px-[10px] py-1.5 font-light text-sm leading-6'>
+                                    <Link href={`/${el.toLowerCase()}`}>{el}</Link>
+                                </li>
+                            )
+                        })
+                    }
+                </ul>
+
             </div>
         </header>
     )
