@@ -35,7 +35,7 @@ export default function Header() {
                 <Button type='secondary' size='small' >Get Started</Button>
                 {/*Hamburger Button */}
                 <div className='flex md:hidden'>
-                    <button className='text-text-body' onClick={() => setIsopen(!isOpen)}>
+                    <button className='text-text-body' onClick={() => setIsopen(!isOpen)} onTouchStart={() => setIsopen(!isOpen)} onTouchEnd={() => setIsopen(isOpen)}>
                         {isOpen ? <GrClose /> : <GiHamburgerMenu />}
                     </button>
                 </div>
