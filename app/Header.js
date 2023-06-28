@@ -14,7 +14,7 @@ export default function Header() {
 
     return (
         <header className='w-full fixed px-3 mt-[71px] z-10'>
-            <div className='container mx-auto xl:px-20 flex justify-around'>
+            <div className='container p-5 mx-auto xl:px-20 flex justify-around'>
                 {/* Logo */}
                 <Link href={'/'} className=' text-lg font-bold flex items-center'>
                     <Logo />

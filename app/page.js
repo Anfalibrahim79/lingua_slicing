@@ -75,7 +75,7 @@ export default function Home() {
         </div>
       </section>
       {/*Why choose */}
-      <section className="container flex items-center justify-center mx-auto lg:px-[100px]">
+      <section className="container flex items-center justify-center mx-auto px-10 lg:px-[100px]">
         <div className="min-h-full lg:h-[472px] mt-[200px] flex flex-col items-center">
           <div className="flex flex-col items-center">
             <p className="text-lg font-bold leading-[190%] uppercase text-outline">WHY CHOOSE US</p>
@@ -121,7 +121,7 @@ export default function Home() {
 
 
           </div>
-          <div className="flex flex-col items-center gap-5 lg:flex-row mt-[58px] md:justify-between">
+          <div className="flex flex-col items-center gap-5 md:flex-row mt-[58px] md:justify-between">
             <div>
               <Image src={'/man.png'} width={366} height={417} alt="teacher-photo" className="rounded-3xl" />
               <h5 className="font-medium text-2xl leading-9 mt-10 text-text-primary">Christian Howard</h5>
@@ -150,7 +150,7 @@ export default function Home() {
         </div>
       </section >
       {/*Students Section */}
-      <section section className="container pt-[240px] mx-auto px-10 lg:px-[100px]" >
+      <section section className="container pt-[100px] lg:pt-[240px] mx-auto px-10 lg:px-[100px]" >
         <div className="min-h-full lg:h-[792px] ">
           <div>
             <p className="text-lg font-bold leading-[190%] uppercase text-outline">TOP STUDIYING</p>
@@ -223,13 +223,13 @@ export default function Home() {
         </div>
       </section >
       {/*Trial Section */}
-      <section section className="pt-[39px] px-[100px] mx-auto  lg:px-[100px]" >
-        <div className="min-w-full h-[595px] flex justify-center items-center">
+      <section section className="container pt-[39px] mx-auto px-10 lg:px-[100px]" >
+        <div className="min-h-full h-[595px] p-10 md:flex md:justify-center md:items-center">
           <div>
-            <h2 className="text-5xl font-light leading-[130%] text-text-primary">Get a free trial lesson today</h2>
+            <h2 className="text-3xl md:text-5xl font-light leading-[130%] text-text-primary text-center">Get a free trial lesson today</h2>
             <p className="text-lg font-light leading-[190%] text-text-body text-center">Start fulfilling your language dreams with our school</p>
             <div className="mt-14 flex justify-center items-center gap-4">
-              <input type="email" required placeholder="Enter your email!" className="py-[15px] pl-[33.5px] pr-[46px] border border-outline rounded-full" />
+              <input type="email" required placeholder="Enter your email!" className="p-5 border border-outline rounded-full" />
               <Button type="primary">Send</Button>
             </div>
           </div>
