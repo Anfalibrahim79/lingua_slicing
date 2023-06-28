@@ -42,7 +42,7 @@ export default function Header() {
 
             </div>
             <div className={`${isOpen ? 'block' : 'hidden'}`}>
-                <ul className='  flex flex-col justify-center items-end mx-auto' >
+                <ul className='  flex flex-col justify-center items-center mx-auto' >
                     {
                         menu.map((el, key) => {
                             return (
