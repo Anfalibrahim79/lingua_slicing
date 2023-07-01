@@ -118,14 +118,14 @@ export default function Home() {
       {/*Teacher Section */}
       <section className="container pt-[240px] flex flex-col mx-auto px-10 lg:px-[100px]">
         <div className="min-h-full md:min-h-[702px]">
-          <div className="flex md:justify-between items-center flex-col">
+          <div className="flex md:justify-between items-center flex-col md:flex-row">
             <div>
               <p className="text-lg font-bold leading-[190%] text-outline uppercase">key persons</p>
               <h2 className="text-5xl font-light leading-[130%] text-text-primary">Meet our teachers</h2>
             </div>
 
             {/* icon arrow */}
-            <div className="space-x-3 items-center flex">
+            <div className="space-x-3 items-center flex mt-10">
               <IconButton type="secondary" size="large" className=" flex justify-center items-center">
                 <a href={`#slide${currentSlide}`} onClick={prevSlide}>
                   <MdKeyboardArrowLeft className="text-3xl" />
@@ -141,7 +141,7 @@ export default function Home() {
 
           </div>
 
-          <Carousel className="mt-20" />
+          <Carousel className="mt-10 md:mt-20" />
 
         </div>
       </section >
