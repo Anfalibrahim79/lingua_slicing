@@ -1,13 +1,28 @@
+"use client"
 import Button from "@/components/icon/Button";
 import IconButton from "@/components/icon/IconButton";
 import LogoFooter from "@/components/icon/LogoFooter";
 import Image from "next/image";
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md'
 import { BiLogoFacebook, BiLogoTwitter, BiLogoInstagram } from 'react-icons/bi'
+import Carousel from "@/components/Carousel";
+import { useState } from "react";
 
 const image = ['F.png', 'M.png', 'H.png', 'G.png'];
 
 export default function Home() {
+  const [currentSlide, setCurrentSlide] = useState(1)
+  console.log(currentSlide)
+  const nextSlide = () => {
+    if (currentSlide < 3) {
+      setCurrentSlide(currentSlide + 1)
+    }
+  }
+  const prevSlide = () => {
+    if (currentSlide > 1) {
+      setCurrentSlide(currentSlide - 1);
+    }
+  }
   return (
     <>
       {/*Hero Section */}
@@ -103,52 +118,34 @@ export default function Home() {
       {/*Teacher Section */}
       <section className="container pt-[240px] flex flex-col mx-auto px-10 lg:px-[100px]">
         <div className="min-h-full md:min-h-[702px]">
-          <div className="flex md:justify-between items-center">
+          <div className="flex md:justify-between items-center flex-col">
             <div>
               <p className="text-lg font-bold leading-[190%] text-outline uppercase">key persons</p>
               <h2 className="text-5xl font-light leading-[130%] text-text-primary">Meet our teachers</h2>
             </div>
 
             {/* icon arrow */}
-            <div className="space-x-3 md:flex items-center hidden">
+            <div className="space-x-3 items-center flex">
               <IconButton type="secondary" size="large" className=" flex justify-center items-center">
-                <MdKeyboardArrowLeft className="text-3xl" />
+                <a href={`#slide${currentSlide}`} onClick={prevSlide}>
+                  <MdKeyboardArrowLeft className="text-3xl" />
+                </a>
               </IconButton>
               <IconButton type="primary" size="large" className="flex justify-center items-center">
-                <MdKeyboardArrowRight className="text-3xl" />
+                <a href={`#slide${currentSlide}`} onClick={nextSlide}>
+                  <MdKeyboardArrowRight className="text-3xl" />
+                </a>
               </IconButton>
             </div>
 
 
           </div>
-          <div className="flex flex-col items-center gap-5 md:flex-row mt-[58px] md:justify-between">
-            <div>
-              <Image src={'/man.png'} width={366} height={417} alt="teacher-photo" className="rounded-3xl" />
-              <h5 className="font-medium text-2xl leading-9 mt-10 text-text-primary">Christian Howard</h5>
-              <div className="flex gap-3">
-                <Image src={'/italy.png'} width={34} height={34} alt="nationality" />
-                <p className="text-lg font-light leading-[190%] text-text-body ">Italian teacher</p>
-              </div>
-            </div>
-            <div>
-              <Image src={'/girl.png'} width={366} height={417} alt="teacher-photo" className="rounded-3xl" />
-              <h5 className="font-medium text-2xl leading-9 mt-10 text-text-primary">Sandra Wilson</h5>
-              <div className="flex gap-3">
-                <Image src={'/spain.png'} width={34} height={34} alt="nationality" />
-                <p className="text-lg font-light leading-[190%] text-text-body "> Spanish teacher</p>
-              </div>
-            </div>
-            <div>
-              <Image src={'/man2.png'} width={366} height={417} alt="teacher-photo" className="rounded-3xl" />
-              <h5 className="font-medium text-2xl leading-9 mt-10 text-text-primary">Jimmy Cooper</h5>
-              <div className="flex gap-3 items-center">
-                <Image src={'/england.png'} width={34} height={34} alt="nationality" />
-                <p className="text-lg font-light leading-[190%] text-text-body ">English teacher</p>
-              </div>
-            </div>
-          </div>
+
+          <Carousel className="mt-20" />
+
         </div>
       </section >
+
       {/*Students Section */}
       <section section className="container pt-[100px] lg:pt-[240px] mx-auto px-10 lg:px-[100px]" >
         <div className="min-h-full lg:h-[792px] ">
@@ -224,7 +221,7 @@ export default function Home() {
       </section >
       {/*Trial Section */}
       <section section className="container pt-[39px] mx-auto px-10 lg:px-[100px]" >
-        <div className="min-h-full h-[595px] p-10 md:flex md:justify-center md:items-center">
+        <div className="min-h-full h-[595px] p-10 md:flex md:justify-center md:items-center ">
           <div>
             <h2 className="text-3xl md:text-5xl font-light leading-[130%] text-text-primary text-center">Get a free trial lesson today</h2>
             <p className="text-lg font-light leading-[190%] text-text-body text-center">Start fulfilling your language dreams with our school</p>

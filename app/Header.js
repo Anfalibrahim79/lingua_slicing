@@ -5,6 +5,7 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import { GrClose } from 'react-icons/gr'
 import { GiHamburgerMenu } from 'react-icons/gi'
+import SideBar from '@/components/SideBar';
 
 
 const menu = ['Course', 'About us', 'Teachers', 'Pricing', 'Carrers', 'Blog'];
@@ -34,27 +35,13 @@ export default function Header() {
                 {/* Button */}
                 <Button type='secondary' size='small' >Get Started</Button>
                 {/*Hamburger Button */}
-                <div className='flex md:hidden'>
-                    <button className='text-text-body' onClick={() => setIsopen(!isOpen)} >
-                        {isOpen ? <GrClose /> : <GiHamburgerMenu />}
-                    </button>
+
+                <div className='flex items-center p-5 text-2xl md:hidden rounded-full cursor-pointer hover:bg-white '>
+                    <SideBar open={isOpen} listMenu={menu} />
                 </div>
 
             </div>
-            <div className={`${isOpen ? 'block' : 'hidden'}`}>
-                <ul className='  flex flex-col justify-center items-center mx-auto' >
-                    {
-                        menu.map((el, key) => {
-                            return (
-                                <li key={key} className='px-[10px] py-1.5 font-light text-sm leading-6'>
-                                    <Link href={`/${el.toLowerCase()}`}>{el}</Link>
-                                </li>
-                            )
-                        })
-                    }
-                </ul>
 
-            </div>
         </header>
     )
 }
